@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -63,7 +64,18 @@ class MyProjects extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: MediaQuery.of(context).size.width * .3,
-                    child: Image.asset(project.image),
+                    width: MediaQuery.of(context).size.width * .25,
+                    // child: Image.asset(project.image[0]),
+                    child: CarouselSlider(
+                      options: CarouselOptions(
+                        enableInfiniteScroll: false,
+                        viewportFraction: 1,
+                        autoPlay: true,
+                      ),
+                      items: project.image.map((i) {
+                        return Image.asset(i);
+                      }).toList(),
+                    ),
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * .075),
                   Expanded(
@@ -121,7 +133,17 @@ class MyProjects extends StatelessWidget {
             children: [
               SizedBox(
                 height: MediaQuery.of(context).size.width * .75,
-                child: Image.asset(project.image),
+                // child: Image.asset(project.image[0]),
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    enableInfiniteScroll: false,
+                    viewportFraction: 1,
+                    autoPlay: true,
+                  ),
+                  items: project.image.map((i) {
+                    return Image.asset(i);
+                  }).toList(),
+                ),
               ),
               SizedBox(width: MediaQuery.of(context).size.width * .075),
               SizedBox(

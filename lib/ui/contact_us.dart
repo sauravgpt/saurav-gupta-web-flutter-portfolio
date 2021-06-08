@@ -218,7 +218,7 @@ class _ContactUsState extends State<ContactUs> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-               style: kYellowButtonStyle,
+                style: kYellowButtonStyle,
                 onPressed: _sendMail,
                 child: Text('Send'),
               ),

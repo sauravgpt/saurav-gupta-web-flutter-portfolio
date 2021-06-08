@@ -8,7 +8,7 @@ class Skill {
 List<Skill> SKILLS = [
   Skill(name: 'Flutter'),
   Skill(name: 'Dart'),
-  Skill(name: 'NodeJS'),
+  Skill(name: 'MongoDB'),
   Skill(name: 'Java Script'),
   Skill(name: 'NodeJs'),
   Skill(name: 'Git'),
